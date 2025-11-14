@@ -1,14 +1,20 @@
 interface MoviePageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export default async function MovieDetails({ params }: MoviePageProps) {
-  const { id } = params; // ✔ FIXED: No await, and has proper type
+  // 🔥 FIX: params must be awaited
+  const { id } = await params;
 
   const BASE_URL = process.env.NEXT_PUBLIC_TMDB_BASE_URL;
   const API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY;
+
+  if (!BASE_URL || !API_KEY) {
+    console.error("Missing environment variables");
+    return <h1>Missing API configuration</h1>;
+  }
 
   const res = await fetch(`${BASE_URL}/movie/${id}?api_key=${API_KEY}`);
 
