@@ -79,7 +79,7 @@ All documentation was later reviewed and edited manually.
 
 ✔️ Vercel Live URL
 
-https://frontend-streaming-dashboard.vercel.app/
+https://frontend-streaming-dashboard-g85s47svb.vercel.app/
 
 ✔️ GitHub Repository
 
