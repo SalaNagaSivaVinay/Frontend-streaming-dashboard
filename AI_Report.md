@@ -79,7 +79,7 @@ All documentation was later reviewed and edited manually.
 
 3. Deployment Details
 ✔️ Vercel Live URL
-<YOUR_DEPLOYED_VERCEL_URL_HERE>
+https://frontend-streaming-dashboard.vercel.app/
 
 ✔️ GitHub Repository
 <YOUR_GITHUB_REPO_LINK_HERE>
