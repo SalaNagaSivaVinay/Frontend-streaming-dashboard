@@ -1,5 +1,11 @@
-export default async function MovieDetails(props) {
-  const { id } = await props.params;  // ⬅ IMPORTANT FIX
+interface MoviePageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default async function MovieDetails({ params }: MoviePageProps) {
+  const { id } = params; // ✔ FIXED: No await, and has proper type
 
   const BASE_URL = process.env.NEXT_PUBLIC_TMDB_BASE_URL;
   const API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY;
