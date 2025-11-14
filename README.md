@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Streaming Dashboard
 
-## Getting Started
+A simple streaming dashboard application built with **Next.js**, using the **TMDB API** to display trending movies, movie details, and related information. The project follows a clean folder structure and demonstrates API integration, dynamic routing, and UI layout in Next.js.
 
-First, run the development server:
+---
 
-```bash
+## 🚀 Features
+
+- Fetch and display **Trending Movies**
+- View **Movie Details** using dynamic route: `/movie/[id]`
+- TMDB API integration using environment variables
+- Responsive and clean UI
+- Server-side data fetching with `async` functions
+
+---
+
+## 🛠️ Tech Stack
+
+- **Next.js 14+**
+- **React**
+- **TMDB API**
+- **Tailwind CSS** (optional based on your project)
+- **TypeScript** (if enabled)
+
+---
+
+## 📁 Folder Structure
+
+streaming-dashboard/
+├── src/
+│ ├── app/
+│ │ ├── movie/
+│ │ │ └── [id]/
+│ │ │ └── page.tsx
+│ │ └── page.tsx
+│ ├── components/
+│ └── styles/
+├── .env.local
+├── package.json
+├── README.md
+└── AI_Report.md
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env.local` file:
+
+NEXT_PUBLIC_TMDB_BASE_URL=https://api.themoviedb.org3
+NEXT_PUBLIC_TMDB_API_KEY=YOUR_TMDB_API_KEY
+
+Replace `YOUR_TMDB_API_KEY` with your actual TMDB key.
+
+---
+
+## ▶️ How to Run the Project
+
+### **1. Install dependencies**
+```sh
+npm install
+
+2. Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project will start at:
+http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📦 Build
+npm run build
+npm start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🧪 Troubleshooting
+"Invalid source map" Error
 
-## Learn More
+Delete build folders and reinstall:
+Remove-Item -Recurse -Force .next
+Remove-Item -Recurse -Force node_modules
+npm install
+npm run dev
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+✨ Author
+Sala Naga Siva Vinay
